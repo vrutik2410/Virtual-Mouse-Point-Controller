@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Virtual Mouse Point Controller</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    body{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+       background-color: antiquewhite;
+    }
+    .head{
+      display: flex;
+      justify-content: space-between;
+      
+      margin: 15px 15px 15px 15px   ;
+      padding:30px;
+      font-weight: 300;
+      background-color: rgb(51, 136, 183);
+    }
+    .heading{
+        font-size: 80px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: rgb(202, 202, 227);
+    }
+    .option li{
+        display: inline;
+        margin:4px;
+        font-size:larger;
+        padding:10px 10px 10px 10px;
+        
+        width:40px;
+    }
+    .option li:hover{
+      
+      cursor:grab;
+      border-bottom: 4px solid rgb(10, 12, 10);
+    }
+    .option{
+      text-align: right;
+      display: block;
+      
+      font-weight: bolder;
+
+    }
+    .container{
+        height:500;
+        width: 100%;
+        padding:23px 23px 23px 23px 23px;
+        
+        margin:10px;
+        background-color: rgb(51, 136, 183);
+    }
+    .carousel-inner{
+       
+        padding:10px;
+        margin:10px;
+    }
+    .info{
+        font-size: 30px;
+        padding:23px 23px 23px 23px;
+        margin:25px;
+        
+      }
+      .item active,.item{
+          text-align: center;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }   
+       
+    .cont{
+        font-size: 30px;
+        font-weight: 100;
+        margin: 0px;
+    } 
+    
+      .runarea{
+        height:200px; 
+        text-align: center;
+        padding:23px 23px 23px 23px;
+       margin:5px;
+      }
+      .run{
+        display:flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+        margin:30px;
+      }
+      .start, .end{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: larger;
+      }
+      
+</style>
+<div class="head">
+     <div class="heading">
+      
+      Virtual Mouse Point Controller
+     </div>
+     
+     <div class="option">
+      <ul>
+       
+      </ul>
+    </div>
+   </div>
+<div class="info">
+    <p>
+        ABOUT THE PROJECT
+        <br>
+    >> Virtual Mouse Controller is a web bassed application which allows the user to almost have 0 human contact with the mouse board on the computer.
+        <br>
+>> The diffrent movements of fingers are recognised by the application and accordingly action are taken.
+        
+        The front-end is coded in Flask which is a python based framework while the backnd is coded in pure python.
+        <br>
+>> The Python code have used several libraries which needs to be installed seperatly.The list is given in the folder.
+<br>
+<br>
+      </div>
+<div class="container">
+  <div class="cont">
+      <br>
+      <p>The following is the vedio demo of the gestures for respective command.
+        It must be taken care that the hand must be kept such that the whole of it is in the frame of the camera.
+      </p>
+      <br>
+      <br>
+  </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+      <li data-target="#myCarousel" data-slide-to="9"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+          <h2>Gesture of cursor movement</h2>
+          <p>Cursor is assigned to the midpoint of index and middle fingertips. This gesture moves the cursor to the desired location. Speed of the cursor movement is proportional to the speed of hand.   </p>
+          <iframe src="https://drive.google.com/file/d/1M9G4gORSwpnd2PKYd6XxQC6yToGxivR7/preview" width=50% height="440"></iframe>
+      </div>
+
+      <div class="item">
+        <h2>Gesture for single left click</h2>
+        The single left click is done when the index finger is bent to 90 degree from the static V-position.
+    
+        <iframe src="https://drive.google.com/file/d/1JrYgd94g4LpLE_pzcKeGKCWSVcQ19fh2/preview" width=50% height="440"></iframe>
+      </div>
+    
+      <div class="item">
+          <h2>Gesture for single right click</h2>
+          <p>The single right click is done when the middle finger is bent to 90 degree from the static V-position.</p>
+          <iframe src="https://drive.google.com/file/d/1zCPFDvtKTiCFP0I0V4EbgH11qxDH4Qgs/preview" width=50% height="440"></iframe>
+          
+      </div>
+      <div class="item">
+        <h2>Gesture for double click</h2>
+        <p>The middle and index finger are touched together and this position is kept static for more than 1 sec.</p>
+        <iframe src="https://drive.google.com/file/d/1PgPD1qIYFWpKkX4IxzyZnQrAjbbt04OQ/preview" width=50% height="440"></iframe>
+    </div>
+    <div class="item">
+        <h2>Gesture for scroll</h2>
+            <p>
+        Dynamic Gestures for horizontal and vertical scroll. The speed of scroll is proportional to the distance moved by pinch gesture from start point. Vertical and Horizontal scrolls are controlled by vertical and horizontal pinch movements respectively.</p>
+        <iframe src="https://drive.google.com/file/d/184MIrnQ_ABBjd_QYnQgb7rAlouZp63Nz/preview" width=50% height="440"></iframe>
+    </div>
+    <div class="item">
+        <h2>Gesture for drag and drop</h2>
+        <p>The drag is done after selecting the the file/folder.The dropping is done when the palm is closed as in the grasping position and the folder is then dragged and ropped to the desired location.</p>
+        <p>It can be used to move/tranfer files from one directory to other.</p>
+        <iframe src="https://drive.google.com/file/d/1BXBG3JOSfS0Z_akqKb3TjlByMrBFnuEE/preview" width=50% height="440"></iframe>
+    </div>
+    <div class="item">
+        <h2>Gesture to select multiple items</h2>
+        <p>The palm is closed as in grasping position and moved in the area where the files are to be selected</p>
+        <iframe src="https://drive.google.com/file/d/1om-1c11FHeejxLkRt8q2M9Vfw7AvEZfj/preview" width=50% height="440"></iframe>
+    </div>
+    <div class="item">
+        <h2>Gestures for Volume control</h2>
+        <p>The rate of increase/decrease of volume is proportional to the distance moved by pinch gesture from start point.
+        <iframe src="https://drive.google.com/file/d/1jEydM19jgqNRBWuuS3PaQetfjUHiJQIX/preview" width=50% height="440"></iframe>
+    </div>
+    <div class="item">
+        <h2>Gestures for Brightness control</h2>
+        <p>The rate of increase/decrease of brightness is proportional to the distance moved by pinch gesture from start point.</p>
+        <iframe src="https://drive.google.com/file/d/1pTC2qadBMkRk62jWdjy1-4PAqLkxESzj/preview" width=50% height="440"></iframe>
+    </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<div class="runarea">
+    <div class="inforun">
+      <p>
+        <h2>For getting starting the stimulation for the above functionalties:</h2>
+      </p>
+    </div>
+    <div class="run">  
+    <div class="start">
+      <p>To start the stimulation press:    </p>
+      <form action="/start/" method="post">
+      <input type="submit" value="start" style="border: 2px solid black; padding:5px 5px 5px 5px;border-radius:4px; width:100px;">
+  </form>
+</div>
+<div class="end">
+  <p>To end the stimulation click:    </p>
+  <form action="/shut/">
+    <input type="submit" value="end" style="border: 2px solid black; padding:5px 5px 5px 5px;border-radius:4px; width:100px;">
+  </form>
+</div>
+</body>
+</html>
