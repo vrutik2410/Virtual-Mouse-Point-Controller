@@ -75,7 +75,7 @@ https://user-images.githubusercontent.com/91780580/170824608-ba358a52-50ce-409d-
 https://user-images.githubusercontent.com/91780580/170824623-3920d007-70e7-43a8-b0a4-076cdcadd007.mp4
 </details>
 
-#how to use:
+## how to use:
 
 On running the **web.py** file the user is sent to an html page where on clicking to the start button the stimulation of the project will start.
 The program can run in background while the user does some other tasks.
